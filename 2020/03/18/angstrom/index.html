@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Clamclam clam clam clam clam clam clam clam clam nc misc.2020.chall.actf.co 20204 clam clam clam clam clam clam.  The connection continuously spits out the following: 12345678malc&amp;#123;malc_malc_malc_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angstrom">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/angstrom/index.html">
+<meta property="og:site_name" content="Notes At Random:">
+<meta property="og:description" content="Clamclam clam clam clam clam clam clam clam clam nc misc.2020.chall.actf.co 20204 clam clam clam clam clam clam.  The connection continuously spits out the following: 12345678malc&amp;#123;malc_malc_malc_">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-18T08:17:46.000Z">
+<meta property="article:modified_time" content="2020-08-22T18:33:25.844Z">
+<meta property="article:author" content="Brian Bashor">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!-- title -->
+    <title>Angstrom</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/07/19/csictf/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/03/02/arch-install/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/03/18/angstrom/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/03/18/angstrom/&text=Angstrom" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/03/18/angstrom/&is_video=false&description=Angstrom" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Angstrom&body=Check out this article: http://yoursite.com/2020/03/18/angstrom/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/03/18/angstrom/&name=Angstrom&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/03/18/angstrom/&t=Angstrom" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Clam"><span class="toc-number">1.</span> <span class="toc-text">Clam</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Consolation"><span class="toc-number">2.</span> <span class="toc-text">Consolation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Keysar"><span class="toc-number">3.</span> <span class="toc-text">Keysar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reasonably-Strong-Algorithm"><span class="toc-number">4.</span> <span class="toc-text">Reasonably Strong Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Magic-Word"><span class="toc-number">5.</span> <span class="toc-text">The Magic Word</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WS1"><span class="toc-number">6.</span> <span class="toc-text">WS1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WS2"><span class="toc-number">7.</span> <span class="toc-text">WS2</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Angstrom
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Notes At Random:</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-03-18T08:17:46.000Z" itemprop="datePublished">2020-03-18</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/ctf/" rel="tag">ctf</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Clam"><a href="#Clam" class="headerlink" title="Clam"></a>Clam</h2><p>clam clam clam clam clam clam clam clam clam nc misc.2020.chall.actf.co 20204 clam clam clam clam clam clam.  The connection continuously spits out the following:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">malc&#123;malc_malc_malc_malc_malc&#125;</span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br><span class="line">malc&#123;malc_malc_malc_malc_malc&#125;</span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br><span class="line">malc&#123;malc_malc_malc_malc_malc&#125;</span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br><span class="line">malc&#123;malc_malc_malc_malc_malc&#125;</span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br></pre></td></tr></table></figure>
+
+<p>I started out by trying to grep out some lines from the saved output:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">microbial:calm none$ more output.txt | grep -v ^<span class="string">'clam'</span> | grep -v ^<span class="string">'malc'</span></span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br><span class="line">malc&#123;malc_malc_malc_malc_malc&#125;</span><br><span class="line">clam&#123;clam_clam_clam_clam_clam&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Nothing starting with <code>clam</code> or <code>malc</code> should be in the results but I got several.  So that’s a bit weird.  Further inspection would show some extra information hidden by a special character.  This was found by using <code>more</code> and some quick scrolling.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">microbial:calm none$ more output.txt | grep -v ^<span class="string">'clam'</span> | grep -v ^<span class="string">'malc'</span> | xxd</span><br><span class="line">00000000: 7479 7065 2022 636c 616d 636c 616d 2220  <span class="built_in">type</span> <span class="string">"clamclam"</span></span><br><span class="line">00000010: 666f 7220 7361 6c76 6174 696f 6e0d 636c  <span class="keyword">for</span> salvation.cl</span><br><span class="line">00000020: 616d 7b63 6c61 6d5f 636c 616d 5f63 6c61  am&#123;clam_clam_cla</span><br><span class="line">00000030: 6d5f 636c 616d 5f63 6c61 6d7d 0a74 7970  m_clam_clam&#125;.typ</span><br><span class="line">00000040: 6520 2263 6c61 6d63 6c61 6d22 2066 6f72  e <span class="string">"clamclam"</span> <span class="keyword">for</span></span><br><span class="line">00000050: 2073 616c 7661 7469 6f6e 0d6d 616c 637b   salvation.malc&#123;</span><br></pre></td></tr></table></figure>
+
+<p>Flag <code>actf{cl4m_is_my_f4v0rite_ctfer_in_th3_w0rld}</code></p>
+<hr>
+<h2 id="Consolation"><a href="#Consolation" class="headerlink" title="Consolation"></a>Consolation</h2><p>I’ve been feeling down lately… Cheer me up!  This site is a basic page with a button. iftenmillionfireflies.js is a horribly obfuscated script.  I tried for a short time to rename functions and variables but realized this was going to take too long.  Looking back at the index page it appears that we can start with the <code>nofret</code>function.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>consolation<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"padding: 20px"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">$<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"monet"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"nofret()"</span> <span class="attr">style</span>=<span class="string">"height:150px; width:150px;"</span>&gt;</span>pay me some money<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"iftenmillionfireflies.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> Given the title I decided to add some “money” via the console.</p>
+<p>From the web console:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">true</span> &#123;nofret()&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Doing so printed the flag in the console.<br>*Note: Just letting this run crashed my browser :(</p>
+<p>Flag <code>actf{you_would_n0t_beli3ve_your_eyes}</code></p>
+<hr>
+<h2 id="Keysar"><a href="#Keysar" class="headerlink" title="Keysar"></a>Keysar</h2><p>Hey! My friend sent me a message… He said encrypted it with the key ANGSTROMCTF.<br>He mumbled what cipher he used, but I think I have a clue.<br>Gotta go though, I have history homework!!<br>agqr{yue_stdcgciup_padas}</p>
+<p>This is a Keyed caesar.  I honestly never heard of this before.  There are several online tools that can figure this out.</p>
+<p>Flag <code>actf{yum_delicious_salad}</code></p>
+<hr>
+<h2 id="Reasonably-Strong-Algorithm"><a href="#Reasonably-Strong-Algorithm" class="headerlink" title="Reasonably Strong Algorithm"></a>Reasonably Strong Algorithm</h2><p>RSA strikes again! This is a basic RSA problem that provides the following values.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n &#x3D; 126390312099294739294606157407778835887</span><br><span class="line">e &#x3D; 65537</span><br><span class="line">c &#x3D; 13612260682947644362892911986815626931</span><br></pre></td></tr></table></figure>
+
+<p>A quick reminder on RSA</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>p</td>
+<td align="left">is a prime number</td>
+</tr>
+<tr>
+<td>q</td>
+<td align="left">is a prime number</td>
+</tr>
+<tr>
+<td>n</td>
+<td align="left">p * q</td>
+</tr>
+<tr>
+<td>private key</td>
+<td align="left">((p - 1) * (q - 1 )) invert e</td>
+</tr>
+<tr>
+<td>e</td>
+<td align="left">public key</td>
+</tr>
+<tr>
+<td>totient(n) = phi</td>
+<td align="left">(p-1) * (q-1)</td>
+</tr>
+<tr>
+<td>ciphertext = (c)</td>
+<td align="left">pow(m, e, n)</td>
+</tr>
+<tr>
+<td>plain text = (m)</td>
+<td align="left">pow(c, e, n)</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line"></span><br><span class="line"><span class="comment"># given.</span></span><br><span class="line">n = <span class="number">126390312099294739294606157407778835887</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="number">13612260682947644362892911986815626931</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># found using factor db.</span></span><br><span class="line">p = <span class="number">9336949138571181619</span></span><br><span class="line">q = <span class="number">13536574980062068373</span></span><br><span class="line"></span><br><span class="line">phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">d = gmpy2.invert(e, phi)</span><br><span class="line"></span><br><span class="line">m = pow(c, d, n)</span><br><span class="line"></span><br><span class="line">print(codecs.decode(hex(m)[<span class="number">2</span>::], <span class="string">"hex"</span>))</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>actf{10minutes}</code></p>
+<hr>
+<h2 id="The-Magic-Word"><a href="#The-Magic-Word" class="headerlink" title="The Magic Word"></a>The Magic Word</h2><p>Ask and you shall receive…that is as long as you use the magic word.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">...SNIP...</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flexmagic"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"magic"</span>&gt;</span>give flag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"hidden"</span>&gt;</span>you passed it chief<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> msg = <span class="built_in">document</span>.getElementById(<span class="string">"magic"</span>);</span></span><br><span class="line"><span class="actionscript">            setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">                <span class="keyword">if</span> (magic.innerText == <span class="string">"please give flag"</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    fetch(<span class="string">"/flag?msg="</span> + <span class="built_in">encodeURIComponent</span>(msg.innerText))</span></span><br><span class="line"><span class="javascript">                        .then(<span class="function"><span class="params">res</span> =&gt;</span> res.text())</span></span><br><span class="line"><span class="javascript">                        .then(<span class="function"><span class="params">txt</span> =&gt;</span> magic.innerText = txt.split<span class="string">``</span>.map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="built_in">String</span>.fromCharCode(v.charCodeAt(<span class="number">0</span>) ^ <span class="number">0xf</span>)).join<span class="string">``</span>);</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, 1000);</span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">...SNIP...</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The script is asking us to change the “magic” id text to “please give flag”.  Changing <code>&lt;p id=&quot;magic&quot;&gt;give flag&lt;/p&gt;</code> to <code>&lt;p id=&quot;magic&quot;&gt;please give flag&lt;/p&gt;</code> will produce the flag.</p>
+<p>Flag <code>actf{1nsp3c7_3l3m3nt_is_y0ur_b3st_fri3nd}</code></p>
+<hr>
+<h2 id="WS1"><a href="#WS1" class="headerlink" title="WS1"></a>WS1</h2><p>Find my password from this recording (: This problem provides a pcap file.</p>
+<p>Just run <code>strings</code> against <code>grep</code> to get the flag.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">microbial:ws1 none$ strings recording.pcapng | grep -i actf</span><br></pre></td></tr></table></figure>
+
+<p>Flag <code>actf{wireshark_isn&#39;t_so_bad_huh-a9d8g99ikdf}</code></p>
+<hr>
+<h2 id="WS2"><a href="#WS2" class="headerlink" title="WS2"></a>WS2</h2><p>No ascii, not problem :) This problem privides a pcap file.</p>
+<p>A quick look at the packets shows that it contains a jpeg.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">microbial:ws2 none$ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;0..10&#125;; <span class="keyword">do</span> tshark -r recording.pcapng tcp.stream eq <span class="variable">$i</span>; <span class="built_in">echo</span> <span class="string">""</span>;  <span class="keyword">done</span></span><br><span class="line">&lt;... SNIP ...&gt;</span><br><span class="line">52  10.100033    127.0.0.1 → 127.0.0.1    TCP 4236 62537 → 80 [PSH, ACK] Seq=99183 Ack=1 Win=408288 Len=4180 TSval=374883274 TSecr=374883274 [TCP segment of a reassembled PDU]</span><br><span class="line">53  10.100055    127.0.0.1 → 127.0.0.1    TCP 56 80 → 62537 [ACK] Seq=1 Ack=103363 Win=304928 Len=0 TSval=374883274 TSecr=374883274</span><br><span class="line">54  10.100649    127.0.0.1 → 127.0.0.1    HTTP 102 POST / HTTP/1.1  (JPEG JFIF image)</span><br><span class="line">55  10.100671    127.0.0.1 → 127.0.0.1    TCP 56 80 → 62537 [ACK] Seq=1 Ack=103409 Win=304864 Len=0 TSval=374883274 TSecr=374883274</span><br><span class="line">56  10.104287    127.0.0.1 → 127.0.0.1    TCP 73 HTTP/1.0 200 OK  [TCP segment of a reassembled PDU]</span><br><span class="line">&lt;... SNIP ...&gt;</span><br></pre></td></tr></table></figure>
+
+<p>The the image is spread across a few packets so the trick is to get the specific TCP stream together</p>
+<p>Flag <code>actf{ok_to_b0r0s-4809813}</code></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Clam"><span class="toc-number">1.</span> <span class="toc-text">Clam</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Consolation"><span class="toc-number">2.</span> <span class="toc-text">Consolation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Keysar"><span class="toc-number">3.</span> <span class="toc-text">Keysar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reasonably-Strong-Algorithm"><span class="toc-number">4.</span> <span class="toc-text">Reasonably Strong Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Magic-Word"><span class="toc-number">5.</span> <span class="toc-text">The Magic Word</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WS1"><span class="toc-number">6.</span> <span class="toc-text">WS1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WS2"><span class="toc-number">7.</span> <span class="toc-text">WS2</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/03/18/angstrom/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/03/18/angstrom/&text=Angstrom" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/03/18/angstrom/&is_video=false&description=Angstrom" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Angstrom&body=Check out this article: http://yoursite.com/2020/03/18/angstrom/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/03/18/angstrom/&title=Angstrom" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/03/18/angstrom/&name=Angstrom&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/03/18/angstrom/&t=Angstrom" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020
+    Brian Bashor
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
