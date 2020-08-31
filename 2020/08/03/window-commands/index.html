@@ -137,12 +137,12 @@
 <p><code>Get-Process -Id (Get-NetTCPConnection -LocalPort port_#).OwningProcess</code><br><code>netstat -a -b</code></p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32&gt; <span class="built_in">Get-Process</span> <span class="literal">-Id</span> (<span class="built_in">Get-NetTCPConnection</span> <span class="literal">-LocalPort</span> <span class="number">1110</span>).OwningProcess</span><br><span class="line"></span><br><span class="line">Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName</span><br><span class="line">-------  ------    -----      -----     ------     --  -- -----------</span><br><span class="line">   <span class="number">1372</span>      <span class="number">71</span>    <span class="number">70808</span>     <span class="number">125620</span>       <span class="number">4.78</span>  <span class="number">16864</span>   <span class="number">2</span> Razer Central</span><br></pre></td></tr></table></figure>
 
-<p>Turns out to be Razer.  Maybe I should have know  =/</p>
+<p>Turns out to be Razer.  Maybe I should have know  =/<br>This can also be done with windows sysinternals</p>
 <h2 id="Mount-a-drive-in-WSL"><a href="#Mount-a-drive-in-WSL" class="headerlink" title="Mount a drive in WSL"></a>Mount a drive in WSL</h2><p>Sometimes WSL does not mount drives at the start and will not mount them if encrypted with bitlocker. First the drive needs to be unlocked then run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t drvfs e: /mnt/e</span><br></pre></td></tr></table></figure>
 
 <h2 id="Overwrite-free-space"><a href="#Overwrite-free-space" class="headerlink" title="Overwrite free space"></a>Overwrite free space</h2><p>This acts as a secure delete when you forget to secure delete:</p>
-<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cipher /w:e:\</span><br></pre></td></tr></table></figure>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cipher /w:X:\</span><br></pre></td></tr></table></figure>
 
 <h2 id="Relock-BitLocker"><a href="#Relock-BitLocker" class="headerlink" title="Relock BitLocker"></a>Relock BitLocker</h2><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage<span class="literal">-bde</span> <span class="literal">-lock</span> X:</span><br></pre></td></tr></table></figure>
 
