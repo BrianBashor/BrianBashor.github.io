@@ -57,6 +57,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/2020/09/08/bash-notes/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
         
         <li><a class="icon" href="/2020/07/29/hacktivitycon/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
@@ -139,7 +141,7 @@
 
 <p>Turns out to be Razer.  Maybe I should have know  =/<br>This can also be done with windows sysinternals</p>
 <h2 id="Mount-a-drive-in-WSL"><a href="#Mount-a-drive-in-WSL" class="headerlink" title="Mount a drive in WSL"></a>Mount a drive in WSL</h2><p>Sometimes WSL does not mount drives at the start and will not mount them if encrypted with bitlocker. First the drive needs to be unlocked then run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t drvfs e: /mnt/e</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t drvfs e: /mnt/X</span><br></pre></td></tr></table></figure>
 
 <h2 id="Overwrite-free-space"><a href="#Overwrite-free-space" class="headerlink" title="Overwrite free space"></a>Overwrite free space</h2><p>This acts as a secure delete when you forget to secure delete:</p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cipher /w:X:\</span><br></pre></td></tr></table></figure>
