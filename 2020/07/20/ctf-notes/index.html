@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Binary ExploitationFirst things first:  run strings on the binary and grep for getsIt never hurts to just slam that “A” key for a few seconds and see what happens.cheksec Example 1: When there is an u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ctf_notes">
+<meta property="og:url" content="http://yoursite.com/2020/07/20/ctf-notes/index.html">
+<meta property="og:site_name" content="Notes At Random:">
+<meta property="og:description" content="Binary ExploitationFirst things first:  run strings on the binary and grep for getsIt never hurts to just slam that “A” key for a few seconds and see what happens.cheksec Example 1: When there is an u">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-20T15:56:23.000Z">
+<meta property="article:modified_time" content="2020-07-20T15:56:23.000Z">
+<meta property="article:author" content="Brian Bashor">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!-- title -->
+    <title>ctf_notes</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/07/25/bandit/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/07/19/csictf/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/20/ctf-notes/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/07/20/ctf-notes/&text=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/20/ctf-notes/&is_video=false&description=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ctf_notes&body=Check out this article: http://yoursite.com/2020/07/20/ctf-notes/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/20/ctf-notes/&name=ctf_notes&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/07/20/ctf-notes/&t=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Binary-Exploitation"><span class="toc-number">1.</span> <span class="toc-text">Binary Exploitation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cryptography"><span class="toc-number">2.</span> <span class="toc-text">Cryptography</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-number">3.</span> <span class="toc-text">Other</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scripting"><span class="toc-number">4.</span> <span class="toc-text">Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Steganography"><span class="toc-number">5.</span> <span class="toc-text">Steganography</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web"><span class="toc-number">6.</span> <span class="toc-text">Web</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        ctf_notes
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Notes At Random:</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-07-20T15:56:23.000Z" itemprop="datePublished">2020-07-20</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/notes/" rel="tag">notes</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Binary-Exploitation"><a href="#Binary-Exploitation" class="headerlink" title="Binary Exploitation"></a>Binary Exploitation</h2><p>First things first:  run <code>strings</code> on the binary and grep for <code>gets</code><br>It never hurts to just slam that “A” key for a few seconds and see what happens.<br><code>cheksec</code></p>
+<p>Example 1:</p>
+<p>When there is an unchecked buffer before another variable you can simply overrun the buffer to input a value.  It’s little ending so the value needs to be in reverse.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">undefined8 <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> local_38 [<span class="number">44</span>];</span><br><span class="line">  <span class="keyword">int</span> local_c;</span><br><span class="line">  </span><br><span class="line">  local_c = <span class="number">0</span>;</span><br><span class="line">  setbuf(<span class="built_in">stdout</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  setbuf(<span class="built_in">stdin</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  setbuf(<span class="built_in">stderr</span>,(<span class="keyword">char</span> *)<span class="number">0x0</span>);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Welcome to csictf! Where are you headed?"</span>);</span><br><span class="line">  gets(local_38);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Safe Journey!"</span>);</span><br><span class="line">  <span class="keyword">if</span> (local_c == <span class="number">0xcafebabe</span>) &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"You\'ve reached your destination, here\'s a flag!"</span>);</span><br><span class="line">    system(<span class="string">"/bin/cat flag.txt"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -n -e <span class="string">"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\xbe\xba\xfe\xca"</span> | ./pwn-2</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a>Cryptography</h2><p>There may be a few missing required libarys needed for gmpy2: <code>sudo apt-get install -y libgmp-dev libmpfr-dev libmpc-dev</code></p>
+<p>RSA:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Letter</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">p</td>
+<td align="left">is a prime number</td>
+</tr>
+<tr>
+<td align="left">q</td>
+<td align="left">is a prime number</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">p * q</td>
+</tr>
+<tr>
+<td align="left">private key (d)</td>
+<td align="left">private key : ((p - 1) * (q - 1 )) invert e</td>
+</tr>
+<tr>
+<td align="left">e</td>
+<td align="left">public key</td>
+</tr>
+<tr>
+<td align="left">totient(n) = phi</td>
+<td align="left">(p-1) * (q-1)</td>
+</tr>
+<tr>
+<td align="left">ciphertext = (c)</td>
+<td align="left">pow(m, e, n)</td>
+</tr>
+<tr>
+<td align="left">plain text = (m)</td>
+<td align="left">pow(c, e, n)</td>
+</tr>
+</tbody></table>
+<p>RSA example with n, e and c provided.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> factordb.factordb <span class="keyword">import</span> FactorDB</span><br><span class="line"></span><br><span class="line">n = <span class="number">408579146706567976063586763758203051093687666875502812646277701560732347095463873824829467529879836457478436098685606552992513164224712398195503564207485938278827523972139196070431397049700119503436522251010430918143933255323117421712000644324381094600257291929523792609421325002527067471808992410166917641057703562860663026873111322556414272297111644069436801401012920448661637616392792337964865050210799542881102709109912849797010633838067759525247734892916438373776477679080154595973530904808231</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="number">226582271940094442087193050781730854272200420106419489092394544365159707306164351084355362938310978502945875712496307487367548451311593283589317511213656234433015906518135430048027246548193062845961541375898496150123721180020417232872212026782286711541777491477220762823620612241593367070405349675337889270277102235298455763273194540359004938828819546420083966793260159983751717798236019327334525608143172073795095665271013295322241504491351162010517033995871502259721412160906176911277416194406909</span></span><br><span class="line"></span><br><span class="line">f = FactorDB(n)</span><br><span class="line">f.connect()</span><br><span class="line">my_factor = f.get_factor_from_api()</span><br><span class="line"></span><br><span class="line">p = int(my_factor[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">q = int(my_factor[<span class="number">1</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">d = gmpy2.invert(e, phi)</span><br><span class="line"></span><br><span class="line">m = pow(c, d, n)</span><br><span class="line"></span><br><span class="line">print(bytes.fromhex(hex(m)[<span class="number">2</span>::]).decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><hr>
+<h2 id="Scripting"><a href="#Scripting" class="headerlink" title="Scripting"></a>Scripting</h2><p>Basic socket snip-it</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">HOST = <span class="string">"host.com"</span></span><br><span class="line">PORT = <span class="number">1234</span></span><br><span class="line"></span><br><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">sock.connect((HOST, PORT))</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    msg_1 = sock.recv(<span class="number">1024</span>).decode().strip()</span><br><span class="line">    print(msg_1)</span><br><span class="line">    sock.sendall(str.encode(str(msg_1).strip()))</span><br></pre></td></tr></table></figure>
+
+<p>Allways print the <code>recv</code> message because sometimes the flage comes out in weird spots.</p>
+<hr>
+<h2 id="Steganography"><a href="#Steganography" class="headerlink" title="Steganography"></a>Steganography</h2><table>
+<thead>
+<tr>
+<th align="left">Tool</th>
+<th align="left">Description</th>
+<th>Example / Other</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>pngcheck</code></td>
+<td align="left">automatically fixes corrupt png files.</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>stegsnow</code></td>
+<td align="left">whitespace stego program, can brute force.</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>zsteg</code></td>
+<td align="left">Lease Signifcant Bit setgo tool</td>
+<td><code>steghide extract -sf file.wav</code></td>
+</tr>
+<tr>
+<td align="left"><code>stegsolve</code></td>
+<td align="left">Shows individual color planes</td>
+<td><code>java -jar Stegosolve</code> (gui)</td>
+</tr>
+<tr>
+<td align="left"><code>steghide</code></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>fcrackzip</code></td>
+<td align="left">zip file brute force</td>
+<td><code>fcrackzip -D -p word_list -u flag.zip</code></td>
+</tr>
+<tr>
+<td align="left"><code>dtmf-decoder</code></td>
+<td align="left">convert phone dial audio to numbers</td>
+<td><a href="https://github.com/ribt/dtmf-decoder" target="_blank" rel="noopener">https://github.com/ribt/dtmf-decoder</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><p>Basic:</p>
+<p><code>wget -r</code> the website and <code>grep -rni flag .</code> to see if it’s simply hiding somewhere in the source.</p>
+<p>Check the cookies.  Odds are if there is a cookie in a CTF problem it’s going to be some kind of cookie edit problem.  Use cookie editor for both fire fox and chrome.</p>
+<p>Always check for a robots.txt file.</p>
+<p>Always check the http hedder</p>
+<hr>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Binary-Exploitation"><span class="toc-number">1.</span> <span class="toc-text">Binary Exploitation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cryptography"><span class="toc-number">2.</span> <span class="toc-text">Cryptography</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-number">3.</span> <span class="toc-text">Other</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scripting"><span class="toc-number">4.</span> <span class="toc-text">Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Steganography"><span class="toc-number">5.</span> <span class="toc-text">Steganography</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web"><span class="toc-number">6.</span> <span class="toc-text">Web</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/20/ctf-notes/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/07/20/ctf-notes/&text=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/20/ctf-notes/&is_video=false&description=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ctf_notes&body=Check out this article: http://yoursite.com/2020/07/20/ctf-notes/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/07/20/ctf-notes/&title=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/20/ctf-notes/&name=ctf_notes&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/07/20/ctf-notes/&t=ctf_notes" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020
+    Brian Bashor
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
