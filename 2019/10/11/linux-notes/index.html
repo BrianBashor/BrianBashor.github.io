@@ -142,6 +142,7 @@
 <img src="/2019/10/11/linux-notes/img1.jpg" class="">
 
 
+
 <img src="/2019/10/11/linux-notes/img2.jpg" class="">
 
 <h2 id="Get-OS-name"><a href="#Get-OS-name" class="headerlink" title="Get OS name"></a>Get OS name</h2><h2 id="Systemd"><a href="#Systemd" class="headerlink" title="Systemd"></a>Systemd</h2><h3 id="Creating-a-Service"><a href="#Creating-a-Service" class="headerlink" title="Creating a Service"></a>Creating a Service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=ROT13 demo service</span><br><span class="line">After=network.target</span><br><span class="line">StartLimitIntervalSec=0[Service]</span><br><span class="line">Type=simple</span><br><span class="line">Restart=always</span><br><span class="line">RestartSec=1</span><br><span class="line">User=user</span><br><span class="line">ExecStart=/usr/bin/env php /path/to/server.php</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
