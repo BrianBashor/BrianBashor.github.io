@@ -57,7 +57,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/07/29/hacktivitycon/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/07/22/vegeta/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2020/07/19/csictf/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -190,7 +190,7 @@
 <h2 id="Scripting"><a href="#Scripting" class="headerlink" title="Scripting"></a>Scripting</h2><p>Basic socket snip-it</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">HOST = <span class="string">"host.com"</span></span><br><span class="line">PORT = <span class="number">1234</span></span><br><span class="line"></span><br><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">sock.connect((HOST, PORT))</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    msg_1 = sock.recv(<span class="number">1024</span>).decode().strip()</span><br><span class="line">    print(msg_1)</span><br><span class="line">    sock.sendall(str.encode(str(msg_1).strip()))</span><br></pre></td></tr></table></figure>
 
-<p>Allways print the <code>recv</code> message because sometimes the flage comes out in weird spots.</p>
+<p>Always print the <code>recv</code> message because sometimes the flag comes out in weird spots.</p>
 <hr>
 <h2 id="Steganography"><a href="#Steganography" class="headerlink" title="Steganography"></a>Steganography</h2><table>
 <thead>
@@ -241,7 +241,7 @@
 <p><code>wget -r</code> the website and <code>grep -rni flag .</code> to see if it’s simply hiding somewhere in the source.</p>
 <p>Check the cookies.  Odds are if there is a cookie in a CTF problem it’s going to be some kind of cookie edit problem.  Use cookie editor for both fire fox and chrome.</p>
 <p>Always check for a robots.txt file.</p>
-<p>Always check the http hedder</p>
+<p>Always check the http heder</p>
 <hr>
 
   </div>

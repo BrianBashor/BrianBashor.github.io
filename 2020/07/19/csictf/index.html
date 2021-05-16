@@ -173,6 +173,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">microbial:tmp none$ fcrackzip -D -p num_list -u panda.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PASSWORD FOUND!!!!: pw == 2611</span><br><span class="line">microbial:tmp none$ unzip -P 2611 panda.zip</span><br><span class="line">Archive:  panda.zip</span><br><span class="line">  inflating: panda1.jpg</span><br><span class="line">  inflating: panda.jpg</span><br><span class="line">microbial:tmp none$</span><br></pre></td></tr></table></figure>
 
 <img src="/2020/07/19/csictf/panda.jpg" class="">
+
+<hr>
 <img src="/2020/07/19/csictf/panda1.jpg" class="">
 
 <p>The two images are close but one is either missing information or contains extra information. The following script will find the difference between the two files.</p>
@@ -202,6 +204,8 @@
 <p>This problem provides a moris.wav and nyc.png file.</p>
 <p>using <code>stegsolve</code> I was able to extract the key from the image.</p>
 <img src="/2020/07/19/csictf/nyc.png" class="">
+
+<hr>
 <img src="/2020/07/19/csictf/solved.bmp" class="">
 
 <p>key: <code>42845193</code></p>
